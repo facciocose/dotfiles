@@ -1,0 +1,5 @@
+use: stow <DIR> to install a config
+use: stow -D <DIR> to uninstall a config
+
+TODO
+- switch zsh config by OSTYPE
