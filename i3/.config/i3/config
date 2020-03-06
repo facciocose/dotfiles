@@ -197,3 +197,5 @@ for_window [workspace=$ws3] layout tabbed
 exec --no-startup-id compton
 exec --no-startup-id slack
 exec --no-startup-id unclutter
+exec --no-startup-id variety
+
