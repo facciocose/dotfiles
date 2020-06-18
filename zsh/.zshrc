@@ -16,6 +16,12 @@ bindkey "^[[B" history-beginning-search-forward-end
 bindkey "^A" beginning-of-line
 bindkey "^E" end-of-line
 
+# Completion
+autoload -Uz compinit
+compinit
+zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}'
+
+
 # Aliases
 alias l="ls"
 alias ll="ls -l"
