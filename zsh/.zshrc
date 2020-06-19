@@ -23,6 +23,7 @@ zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}'
 
 
 # Aliases
+alias ls="ls --color=auto"
 alias l="ls"
 alias ll="ls -l"
 alias la="ls -la"
