@@ -44,8 +44,9 @@ case "$OSTYPE" in
     export PATH=$PATH:$ANDROID_HOME/platform-tools
   ;;
   linux*)
-    export PATH=$HOME/.local/bin:$PATH
+    export PATH=$HOME/.local/bin:$HOME/.android/platform-tools:$PATH
     export TERMINAL="alacritty"
     alias ssh='TERM=xterm-256color ssh'
+    alias open=xdg-open
   ;;
 esac
