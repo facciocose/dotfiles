@@ -24,7 +24,7 @@ alias la="ls -la"
 # OS specific settings
 case "$OSTYPE" in
   darwin*)
-    export PATH=/usr/local/sbin:$PATH
+    export PATH=/$HOME/.local/bin:usr/local/sbin:$PATH
     
     export NVM_DIR="$HOME/.nvm"
     [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
