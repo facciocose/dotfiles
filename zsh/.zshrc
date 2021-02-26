@@ -29,10 +29,6 @@ alias ll="ls -l"
 alias la="ls -la"
 alias yay="cpulimit -l 50 yay"
 
-# NVM
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-
 # OS specific settings
 case "$OSTYPE" in
   darwin*)
@@ -51,8 +47,8 @@ case "$OSTYPE" in
     export PATH=$PATH:$ANDROID_HOME/tools
     export PATH=$PATH:$ANDROID_HOME/tools/bin
     export PATH=$PATH:$ANDROID_HOME/platform-tools
-    export TERMINAL="alacritty"
-    alias ssh='TERM=xterm-256color ssh'
+#    export TERMINAL="alacritty"
+#    alias ssh='TERM=xterm-256color ssh'
     alias open=xdg-open
   ;;
 esac
