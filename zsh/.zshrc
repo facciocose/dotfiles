@@ -21,13 +21,18 @@ autoload -Uz compinit
 compinit
 zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}'
 
-
 # Aliases
 alias ls="ls --color=auto"
 alias l="ls"
 alias ll="ls -l"
 alias la="ls -la"
 alias yay="cpulimit -l 50 yay"
+
+# asdf
+. $HOME/.asdf/asdf.sh
+
+export PATH=$HOME/.local/bin:$PATH
+export PATH="$HOME/.poetry/bin:$PATH"
 
 # OS specific settings
 case "$OSTYPE" in
@@ -42,7 +47,6 @@ case "$OSTYPE" in
   ;;
   linux*)
     export ANDROID_HOME=$HOME/.android
-    export PATH=$HOME/.local/bin:$PATH
     export PATH=$PATH:$ANDROID_HOME/emulator
     export PATH=$PATH:$ANDROID_HOME/tools
     export PATH=$PATH:$ANDROID_HOME/tools/bin
@@ -52,3 +56,4 @@ case "$OSTYPE" in
     alias open=xdg-open
   ;;
 esac
+
