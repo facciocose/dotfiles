@@ -37,7 +37,7 @@ export PATH="$HOME/.poetry/bin:$PATH"
 # OS specific settings
 case "$OSTYPE" in
   darwin*)
-    export PATH=/$HOME/.local/bin:usr/local/sbin:$PATH
+    export PATH=/$HOME/.local/bin:/usr/local/sbin:$PATH
 
     export ANDROID_HOME=$HOME/Library/Android/sdk
     export PATH=$PATH:$ANDROID_HOME/emulator
