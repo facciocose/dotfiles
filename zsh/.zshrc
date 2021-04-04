@@ -21,6 +21,17 @@ autoload -Uz compinit
 compinit
 zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}'
 
+# VCS
+autoload -Uz vcs_info
+zstyle ':vcs_info:*' enable git svn
+precmd() { vcs_info }
+zstyle ':vcs_info:git*' formats " %b"
+
+# Prompt
+setopt prompt_subst
+PROMPT="%1~ %# "
+RPROMPT='${vcs_info_msg_0_}'
+
 # Aliases
 alias ls="ls --color=auto"
 alias l="ls"
@@ -31,14 +42,16 @@ alias yay="cpulimit -l 50 yay"
 # asdf
 . $HOME/.asdf/asdf.sh
 
-export PATH=$HOME/.local/bin:$PATH
+# Poetry
 export PATH="$HOME/.poetry/bin:$PATH"
+
+# Local bin
+export PATH=$HOME/.local/bin:$PATH
 
 # OS specific settings
 case "$OSTYPE" in
   darwin*)
-    export PATH=/$HOME/.local/bin:/usr/local/sbin:$PATH
-
+    export PATH=/usr/local/sbin:$PATH
     export ANDROID_HOME=$HOME/Library/Android/sdk
     export PATH=$PATH:$ANDROID_HOME/emulator
     export PATH=$PATH:$ANDROID_HOME/tools
@@ -51,9 +64,6 @@ case "$OSTYPE" in
     export PATH=$PATH:$ANDROID_HOME/tools
     export PATH=$PATH:$ANDROID_HOME/tools/bin
     export PATH=$PATH:$ANDROID_HOME/platform-tools
-#    export TERMINAL="alacritty"
-#    alias ssh='TERM=xterm-256color ssh'
     alias open=xdg-open
   ;;
 esac
-
