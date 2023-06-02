@@ -11,6 +11,8 @@ set background=dark
 
 " basic settings
 let mapleader="\<Space>"
+set tabstop=4
+set shiftwidth=4
 "set number
 "set relativenumber
 "set mouse=a
