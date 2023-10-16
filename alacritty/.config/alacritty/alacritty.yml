@@ -1,9 +1,9 @@
 window:
   padding:
-    x: 4
-    y: 4
+    x: 8
+    y: 8
 font:
-  normal:
-    family: Hack Nerd Font Mono
-  size: 9
-background_opacity: 0.90
+  size: 18
+
+import:
+  - ~/.config/alacritty/gruvbox_dark.yml
